@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>exercice3Canvas2</title>
+  <script src="jquery-3.2.1.js"></script>
+</head>
+  <body>
+    <canvas id="canvas" width="2000" height="500">
+      Texte alternatif pour les navigateurs ne supportant pas Canvas.
+    </canvas>
+    <script>
+      var c=document.getElementById('canvas');
+      var ctx=c.getContext("2d");
+      var text1 = 'École du Numérique';
+      var text2= 'du Noyonnais';
+      ctx.beginPath();      // Lettre E
+      ctx.lineWidth = 5;
+      ctx.moveTo(200,100);
+      ctx.lineTo(50,100);
+      ctx.lineTo(50,300);
+      ctx.lineTo(200,300);
+      ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.moveTo(200,200);
+      ctx.lineTo(50,200);
+      ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();      // Lettre N
+      ctx.moveTo(400,300);
+      ctx.lineTo(400,100);
+      ctx.lineTo(650,300);
+      ctx.lineTo(650,100);
+      ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();      // Gestion du texte
+      ctx.font = "30pt Verdana";
+      ctx.fillStyle = "grey";
+      ctx.closePath();
+      ctx.fillText(text1,400,350);
+      ctx.fillText(text2,400,390);
+      ctx.closePath();
+      ctx.beginPath();      // Chiffre 2
+      ctx.strokeStyle = "#EA4E1D";
+      ctx.lineWidth = 10;
+      ctx.bezierCurveTo(200, 100 , 300, 50, 400, 30 );
+      ctx.bezierCurveTo(405, 30 , 450, 30, 395, 93 );
+      ctx.bezierCurveTo(390, 100 , 350, 150, 135, 380 );
+      ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.bezierCurveTo(135, 380 , 320, 345, 340, 350 );
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.lineWidth = 2;
+      ctx.fillStyle = "#EA4E1D";
+      ctx.moveTo(339,346);
+      ctx.quadraticCurveTo(348,346,350,351);
+      ctx.quadraticCurveTo(345,351,339,351);
+      ctx.quadraticCurveTo(342,352,344,354);
+      ctx.quadraticCurveTo(342,354,335,353);
+      ctx.stroke();
+      ctx.fill();
+      //  hexagone du haut
+      ctx.beginPath();
+      ctx.fillStyle = "#EBEBEB";
+      ctx.moveTo(730,100);
+      ctx.lineTo(750,115);
+      ctx.lineTo(750,135);
+      ctx.lineTo(730,150);
+      ctx.lineTo(710,135);
+      ctx.lineTo(710,115);
+      ctx.fill();
+      ctx.closePath();
+      // hexagone 2ème ligne gauche
+      ctx.beginPath();
+      ctx.fillStyle = "#DBDADB";
+      ctx.moveTo(705,140);
+      ctx.lineTo(725,155);
+      ctx.lineTo(725,175);
+      ctx.lineTo(705,190);
+      ctx.lineTo(685,175);
+      ctx.lineTo(685,155);
+      ctx.fill();
+      ctx.closePath();
+      // hexagone 2ème ligne droite
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.fillStyle = "#595656";
+      ctx.moveTo(755,140);
+      ctx.lineTo(775,155);
+      ctx.lineTo(775,175);
+      ctx.lineTo(755,190);
+      ctx.lineTo(735,175);
+      ctx.lineTo(735,155);
+      ctx.fill();
+      ctx.closePath();
+      //  hexagone 3ème ligne
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.fillStyle = "#EA4E1D";
+      ctx.moveTo(730,180);
+      ctx.lineTo(750,195);
+      ctx.lineTo(750,215);
+      ctx.lineTo(730,230);
+      ctx.lineTo(710,215);
+      ctx.lineTo(710,195);
+      ctx.fill();
+      ctx.closePath();
+      // hexagone 4ème ligne gauche
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.fillStyle = "#878787";
+      ctx.moveTo(705,220);
+      ctx.lineTo(725,235);
+      ctx.lineTo(725,255);
+      ctx.lineTo(705,270);
+      ctx.lineTo(685,255);
+      ctx.lineTo(685,235);
+      ctx.fill();
+      ctx.closePath();
+      // hexagone 4ème ligne droite
+      ctx.beginPath();
+      ctx.fillStyle = "#EBEBEB";
+      ctx.moveTo(755,220);
+      ctx.lineTo(775,235);
+      ctx.lineTo(775,255);
+      ctx.lineTo(755,270);
+      ctx.lineTo(735,255);
+      ctx.lineTo(735,235);
+      ctx.fill();
+      ctx.closePath();
+      //petit hexagone de gauche
+      ctx.beginPath();
+      ctx.fillStyle = "#EBEBEB";
+      ctx.moveTo(785,166);
+      ctx.lineTo(790,170);
+      ctx.lineTo(790,175);
+      ctx.lineTo(785,179);
+      ctx.lineTo(780,175);
+      ctx.lineTo(780,170);
+      ctx.fill();
+      ctx.closePath();
+      //petit hexagone du milieu
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.fillStyle = "#878787";
+      ctx.moveTo(795,176);
+      ctx.lineTo(800,180);
+      ctx.lineTo(800,185);
+      ctx.lineTo(795,189);
+      ctx.lineTo(790,185);
+      ctx.lineTo(790,180);
+      ctx.fill();
+      ctx.closePath();
+      //petit hexagone de droite
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.fillStyle = "#EA4E1D";
+      ctx.moveTo(805,172);
+      ctx.lineTo(807,173);
+      ctx.lineTo(807,175);
+      ctx.lineTo(805,176);
+      ctx.lineTo(803,175);
+      ctx.lineTo(803,173);
+      ctx.fill();
+      ctx.closePath();
+    </script>
+  </body>
+</html>
